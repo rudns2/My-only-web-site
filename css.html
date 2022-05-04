@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en"> <!-- 변역기(영문->한국어) -->
+    <head>
+        <title></title> 
+        <style>
+            div {  } /* 태그 선택 */
+            .a {  } /* class 선택 */
+            #a {  } /* id 선택 */
+            div.a {  } /* 특정 태그의 class 선택 */ 
+            div div {  } /* div 태그 안에 div 선택 */
+            div .a {  } /* div 안에 있는 a라는 클래스가 있는 태그 선택 */
+            div + div {  } /* div 태그 다음에 있는 div 태그만 선택(클래스) */
+            .b>div {  } /* b라는 클래스 바로 아래 자식태그(자식태그 안에 있는 태그 제외)*/
+            .b div:first-child {  } /* 첫번째 자식 */
+            .b div:last-child {  } /* 마지막번째 자식 */
+            .b div:nth-child(n) { } /* 선택 자식 */
+
+            html { font-size: 10px;} 
+            div { border:0.1rem dashed #ff0000; /*border-right(오른쪽 선만 없음 단, 순서는 뒤에 작성)*/ 
+            font-size: 20px; font-weight:normal; font-family: '궁서'; font-style:italic; color:#00f; text-align:center; line-height:20px; letter-spacing:-1px; word-break:keep-all; white-space:nowrap; }
+            u { text-decoration:line-through; }
+            /*
+            text-align:left; right; center; //정렬
+            text-decoration:underline; none; line-through; //밑줄, 취소선 등 문장을 꾸밈.
+            line-height:1; // 글자들의 줄간격을 조정.(행간)
+            letter-spacing:; 글자와 글자간의 간격(자간)
+            word-break:break-all(글자단위 줄바꿈); 
+                       keep-all(단어단위 줄바꿈)
+            white-space:wrap; nowrap(줄바꿈 안되게 막는방식)
+            */
+            /* 
+                선의 종류 3 가지
+                실선 - solid
+                점선 - dotted
+                점선(긴) - dashed
+
+                border
+                border - width: 굵기
+                border - style: 선의 종류
+                border - color: 선의 색상
+                속성 : 속성 값 ;
+
+                border-top
+                border-bottom
+                border-left
+                border-right 
+
+                html(모든 글씨 사이즈 상속) -> border상속 x 
+                html상속하지만 따로 설정하면 설정값에 따라감
+            */
+           
+
+        </style>
+    </head>
+    <body>
+
+        <div class="b">
+            <p><u>1</u></p>
+            <div><s>2</s></div>
+            <div><del>3</del></div>
+            <div>
+                <div>동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세 무궁화 삼천리 화려강산 대한사람 대한으로 길이보전하세.</div>
+                <div>5</div>
+            </div>
+        </div>
+        <div class="a">6</div>
+        <p class="a">7</p>
+        <div id="a">8</div>
+        
+
+    </body>
+</html>
